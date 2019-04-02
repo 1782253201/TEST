@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.support.v7.app.AppCompatDelegate;
+import android.widget.Toast;
 
 import com.forgetsky.wanandroid.core.DataManager;
 import com.forgetsky.wanandroid.di.component.DaggerAppComponent;
@@ -81,6 +82,7 @@ public class WanAndroidApp extends Application implements HasActivityInjector {
         WanAndroidApp application = (WanAndroidApp) context.getApplicationContext();
         return application.refWatcher;
     }
+
 
     public static Context getContext() {
         return context;

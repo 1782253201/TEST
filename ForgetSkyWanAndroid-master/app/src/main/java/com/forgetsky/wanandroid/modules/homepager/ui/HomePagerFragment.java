@@ -20,6 +20,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.forgetsky.wanandroid.R;
 import com.forgetsky.wanandroid.base.fragment.BaseFragment;
@@ -115,7 +116,7 @@ public class HomePagerFragment extends BaseFragment<HomePagerPresenter> implemen
         if (mAdapter.getData().size() <= 0 || mAdapter.getData().size() < position) {
             return;
         }
-
+        Toast.makeText(getActivity(),"this",Toast.LENGTH_SHORT).show();
         CommonUtils.startArticleDetailActivity(_mActivity,
                 mAdapter.getData().get(position).getId(),
                 mAdapter.getData().get(position).getTitle(),
